@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="./resposive.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Card</title>
+</head>
+<body>
+        <div class="wrapper"> 
+            <div class="left_container">
+                <div class="left_bg_image">
+                    <img src="./images/bg-main-desktop.png" alt="...">
+                </div>
+                <div class="front_card">
+                        <img src="./images/bg-card-front.png" alt="...">
+                        <div class="front_card_value">
+                            <div class="circles">
+                                <div><img src="https://media.discordapp.net/attachments/896392052093374514/896395566400040990/120x120.png"></div>
+                                <div></div>
+
+                            </div>
+                            <div class="card_number_value">
+                                <p class="card_numbers_textContent">0000 0000 0000 0000</p>
+                            </div>
+                            <div class="card_owner">
+                                <p class="cardName_textContent">owner name</p>
+                                <p><span class="date_mm">00</span>/<span class="date_yy">00</span></p>
+                            </div>
+                        </div>
+                </div>
+                <div class="rare_card">
+                        <img src="./images/bg-card-back.png" alt="...">
+                        <div class="back_card_value">
+                            <p class="cvv_textContent">000</p>
+                        </div>
+                </div>
+            </div>
+            <!-- contains Inputs -->
+            <div class="right_container">
+                <form method="get" autocomplete="off">
+                    <div class="wrapper_two">
+                    <div class="cardholder_name">
+                            <p class="card_title">cardholder name</p>
+                            <input type="text" maxlength="26" placeholder="e.g Jane Appleseed" class="onInput">
+                            <div class="Allowed cardHolder_error">
+                                <p class="text_error">only character are allowed</p>
+                            </div>
+                    </div>
+                    <div class="card_number">
+                            <p class="card_title">card number</p>
+                            <input type="text" id="text" maxlength="19" placeholder="e.g 1234 5678 9123 0000" class="onInput"/>
+                            <div class="Allowed cardNumber_error">
+                                <p class="number_error">only number are allowed</p>
+                            </div>
+                    </div>
+                    <div class="card_secure">
+                        <div class="expire_date">
+                            <p class="card_title">exp.date (mm/yy)</p>
+                            <input type="text" placeholder="MM" maxlength="2" class="onInput">
+                            <input type="text" placeholder="YY" maxlength="2" class="onInput"/>
+                            <div class="Allowed cardDate_error">
+                                <p class="date_error">can't be blank</p>
+                            </div>
+                        </div>
+                        <div class="cvc">
+                            <p class="card_title">cvc</p>
+                            <input type="text" placeholder="e.g 123" maxlength="3" class="onInput"/>
+                            <div class="Allowed cardCvc_error">
+                                <p class="cvc_error">can't be blank</p>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="completed_container">
+                        <div class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="31" height="31" fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16">
+                                <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+                            </svg>
+                        </div>
+                        <h2>Thank you!</h2>
+                        <p>We've added your card details</p>
+                    </div>
+
+                    <div class="confirm_btn">
+                        <button type="submit" class="submit">Confirm</button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    <script src="./index.js"></script>
+</body>
+</html>

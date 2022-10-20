@@ -1,0 +1,306 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    height: 100vh;
+    overflow: hidden;
+    min-width: 1024px;
+}
+.wrapper{
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.left_container{
+    width: 50%;
+}
+
+.right_container{
+    width: 100%;
+}
+
+.left_container{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.left_bg_image{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    z-index: -9;
+}.left_bg_image img{
+    width: 100%;
+    height: 100%;
+}
+
+
+.front_card , .rare_card{
+    position: relative;
+    overflow: hidden;
+    width: 306px;
+    height: max-content;
+}
+.front_card{
+    right:5%;
+    margin-bottom: 38px;
+}
+
+.rare_card{
+    left: 6%;
+}
+.front_card img , .rare_card img{
+    width: 100%;
+    height: 100%;
+}
+.front_card , .rare_card{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 331px;
+    height: 179px;
+}
+.front_card_value{
+    padding: 16px;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.circles{
+    width: 100%;
+    height: max-content;
+    display: flex;
+    align-items: center;
+}
+.circles div:first-child{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}.circles div:last-child{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-left: 13px;
+}
+.card_number_value{
+    width: 100%;
+    height: max-content;
+    margin-top: 38px;
+}.card_number_value p{
+    font-size: 22px;
+    color: #FFFFFF;
+    letter-spacing: 1px;
+    
+}
+.card_owner{
+    width: 100%;
+    height: max-content;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 24px;
+    text-transform: uppercase;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+}.card_owner p:first-child{
+    font-size: 12px;
+    color: #FFFFFF;
+    letter-spacing: 1px;
+}.card_owner p:last-child{
+    font-size: 14px;
+    color: #FFFFFF;
+    letter-spacing: 0.7px;
+}
+
+
+.back_card_value{
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 16px;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+}.back_card_value p{
+    padding-right: 20px;
+    font-size: 12px;
+    font-weight: 500;
+    color: #FFFFFF;
+    letter-spacing: 1px;
+}
+
+.right_container{
+    display: flex;
+    align-items: center;
+    background-color: #12141D;
+}
+
+form{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.cardholder_name input , .card_number input{
+    width: 385px;
+    height: max-content;
+    padding: 11px 16px;
+    border-radius: 8px;
+    outline: none;
+    border: solid 1px #ccc;
+    font-size: 15px;
+    margin-bottom: 5px;
+    font-weight: 500;
+}.cardholder_name input::placeholder , .card_number input::placeholder{
+    color: rgb(43 43 43 / 50%);
+    font-weight: 600;
+}
+
+/* Input Sub Title Which Character are allowe */
+.Allowed{
+    margin: 5px 0 10px 0;
+    font-size: 14px;
+    color: red;
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transition: .2s ease-in-out;
+}
+
+.visible_character{
+    visibility: visible !important;
+    opacity: 1 !important;
+    pointer-events: all !important;
+}
+/* ------------------------- */
+
+.card_title{
+    text-transform: uppercase;
+    margin: 8px 0;
+    font-size: 11px;
+    color: white;
+    letter-spacing: .9px;
+    font-weight: 700;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    -webkit-user-select: none; 
+    -ms-user-select: none; 
+    user-select: none; 
+}
+
+.card_secure{
+    display: flex;
+    align-items: center;
+}
+.expire_date input{
+    width: 62px;
+    height: max-content;
+    padding: 11px 16px;
+    border-radius: 8px;
+    outline: none;
+    border: solid 1px #ccc;
+    font-size: 15px;
+    margin-bottom: 15px;
+    font-weight: 500;
+}.expire_date input:nth-child(3) {
+    margin:0 20px 0 8px;
+}
+
+.cvc input{
+    height: max-content;
+    padding: 11px 16px;
+    border-radius: 8px;
+    outline: none;
+    border: solid 1px #ccc;
+    font-size: 15px;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+/* All input Bored Change */
+.onClickBorderChange{
+    transition: .2s ease-in-out;
+}
+.input_border{
+    border: solid 1px rgb(27, 14, 58) !important;
+}
+.input_border_keyUpChange{
+    border: solid 1px rgb(27, 14, 58) !important;
+}
+/* ---------------------------------- */
+.confirm_btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 385px;
+}
+.confirm_btn button{
+    width: 100%;
+    height: max-content;
+    padding: 12px 0;
+    font-size: 17px;
+    border-radius: 6px;
+    background-color: #2c7dfa;
+    color: #FFFFFF;
+    border: none;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.completed_container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    display: none;
+    color: white;
+}
+.icon{
+    width: 53px;
+    height: 53px;
+    background-image: linear-gradient(to right top, #12141d, #14161f, #161921, #191b24, #1b1d26, #212536, #262e47, #2b3758, #32497f, #365da8, #3771d3, #3685ff);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+.icon svg{
+    fill: #FFFFFF;
+}
+.completed_container h2{
+    padding: 24px 0 14px 0;
+    font-weight: 100;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+.completed_container p{
+    padding: 0 0 29px 0;
+    color: white;
+}
+
+
+
+

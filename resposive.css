@@ -1,0 +1,43 @@
+@media screen and (max-width: 921px) {
+    .left_container{
+        width: 80%;
+    }
+    .left_bg_image{
+        width: 60%;
+    }
+    .front_card , .front_card, .rare_card{
+        width: 307px ;
+        height: 167px;
+    }
+    .right_container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .right_container form{
+        width: 420px;
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+    .cardholder_name input , .card_number input{
+        width: 320px;
+    }
+    .expire_date input {
+        width: 50px;
+        font-size: 14px;
+        padding: 10px;
+        text-align: center;
+    }
+    .cvc input {
+        width: 189px;
+    }
+    .Allowed  p{
+        font-size: 12px;
+    }
+    .confirm_btn{
+        width: 320px;
+    }
+}
+
+
